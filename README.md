@@ -112,6 +112,8 @@ The script assumes that you have a public load balancer created. In addition, yo
     >
     > * If you don't already have a listener setup for HTTPS, then exclude the `LISTENER_NAME` variable for now. Once the certificate has been deployed to the load balancer specified by the OCID, you may use that certificate to create the required listener supporting SSL communications.
     > * You may add more than one domains to the certificate. Assign them as a comma-delimited list to the `DOMAIN` variable.
+    > * The variable `DRY_RUN` must be `N` to create a certificate
+    > * To delete old `DOMAIN` certificates after renewal, set `DEL_OLD_CERTS` value to `Y`
 1. Generate and deploy the certificate. If the `LISTENER_NAME` is defined, then the new certificate will be assigned to the listener as well.
     ```bash
     $APP_HOME/cert-manager.sh -a generate -f example-com.env -p 8000
