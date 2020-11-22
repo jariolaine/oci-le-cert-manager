@@ -104,6 +104,7 @@ The script assumes that you have a public load balancer created. In addition, yo
     DEPLOY_TARGET=LB
     LB_OCID=ocid1.loadbalancer.oc1...
     LISTENER_NAME=listener_https
+    DEL_OLD_CERTS=N
     DRY_RUN=Y
     ```
 
