@@ -10,6 +10,7 @@ ENV LC_ALL=en_US.utf-8 \
     LISTENER_NAME=https_listener \
     WAF_OCID=ocid1.waaspolicy.oc1... \
     DEPLOY_TARGET=LB \
+    DEL_OLD_CERTS=N \
     DRY_RUN=N
 
 COPY ./app/requirements.txt /tmp/

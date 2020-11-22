@@ -16,8 +16,6 @@ fi
 
 # Default parameters for oci command
 oci_defaults=()
-# We use dynamic groups authentication
-oci_defaults+=(--auth instance_principal)
 # Load balancer OCID defined in enviroment file
 oci_defaults+=(--load-balancer-id ${LB_OCID})
 
